@@ -6,6 +6,6 @@ Rules: Click on the tiles to reveal a color, click on another tile to find the c
 
 ☐ Technologies Used: JavaScript, HTML, CSS
 
-☐ Game Enhancements for the future ..... Timed game, getting user input for Names, putting in a scoreboard
+☐ Game Enhancements for the future ..... Timed game, getting user input for Names, putting in a scoreboard, animation on cards
 
 ![screenshot](screenshotgame.png)
