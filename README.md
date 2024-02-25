@@ -8,4 +8,4 @@ Rules: Click on the tiles to reveal a color, click on another tile to find the c
 
 ☐ Game Enhancements for the future ..... Timed game, getting user input for Names, putting in a scoreboard
 
-![screenshotgame](<Screenshot 2024-02-25 at 23.23.54.png>)
+![screenshot](screenshotgame.png)
