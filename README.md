@@ -1,4 +1,3 @@
-A README.md file with these sections:
 
 TILE MEMORY GAME
 
