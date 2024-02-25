@@ -1,5 +1,3 @@
-A README.md file with these sections:
-
 TILE MEMORY GAME
 
 Rules: Click on the tiles to reveal a color, click on another tile to find the color match. Tiles stays open once matched! Complete the game by matching all tiles! To play again, refresh page!
