@@ -30,7 +30,7 @@ http://127.0.0.1:5500/index.html
 
 # References
 
-1. https://www.shecodes.io/athena/8553-centering-a-horizontal-list-with-flexbox-in-css#:~:text=To%20center%20a%20horizontal%20list,to%20center%20the%20list%20horizontally.
+1.https://www.shecodes.io/athena/8553-centering-a-horizontal-list-with-flexbox-in-css#:~:text=To%20center%20a%20horizontal%20list,to%20center%20the%20list%20horizontally.
 
 2. https://www.w3schools.com/js/default.asp
 

@@ -1,9 +1,9 @@
 let colours = ["red", "red", "blue", "blue", "green", "green", "yellow", "yellow", "purple", "purple", "pink", "pink"];
-let tileObjects = []; //an array that stores all the tile data, element, html etc
-let clickedTiles = []; //stores the selected tiles, this array will hold max of 2 tiles
-let openTiles = 0; // keeps track of the correctly guessed tiles
 
-// Tile class blueprint(object)
+let tileObjects = [];
+let clickedTiles = [];
+let openTiles = 0;
+
 class Tile {
   constructor(_htmlElement, _id) {
     this.index = Math.floor(Math.random() * colours.length);
@@ -12,19 +12,15 @@ class Tile {
     this.id = _id;
   }
 }
-
 // creates new tiles and saves in tileObjects array
-//instead of using querySelector, use getElementById to pull html elements by their id.
-
 for (let i = 0; i < 12; i++) {
-  let tile = new Tile(document.getElementById(`${i}`), i); //getElementbyId takes in a string as a parameter so we use a string literal `` ${}
-  tileObjects.push(tile); //pushes tileObjects to the back of the tileObjects arr
+  let tile = new Tile(document.getElementById(`${i}`), i);
+  tileObjects.push(tile);
 }
 
 // adds click event listener to each html tile, (applying eventListener to html element)
 for (const e of tileObjects) {
   e.htmlElement.addEventListener("click", function () {
-    // opens the tile
     if (clickedTiles.length < 2) {
       let htmlTileElement = e.htmlElement;
       htmlTileElement.style.backgroundColor = e.colour;
@@ -36,23 +32,17 @@ for (const e of tileObjects) {
       if (clickedTiles[0].colour === clickedTiles[1].colour) {
         clickedTiles.forEach((x) => (x.htmlElement.style.border = "#7FFF00 2px solid"));
 
-        // keeping track of correct tiles, see code 51
         openTiles += 2;
+        clickedTiles = [];
 
-        // reset
-        clickedTiles = []; //after 2 tiles compared, it resets
+        //this else block runs when no match is found
       } else {
-        // reset tiles after 300ms
         setTimeout(() => {
-          //read on setTimeout syntax
           clickedTiles.forEach((element) => (element.htmlElement.style.backgroundColor = "grey"));
-
-          //reset
           clickedTiles = [];
-        }, 300); //it runs the function after the timer ends in ms
+        }, 300);
       }
     }
-
     // check if game is won
     if (openTiles === 12) {
       const won = document.createElement("H1");
