@@ -1,17 +1,4 @@
-let colours = [
-  "red",
-  "red",
-  "blue",
-  "blue",
-  "green",
-  "green",
-  "yellow",
-  "yellow",
-  "purple",
-  "purple",
-  "pink",
-  "pink",
-];
+let colours = ["red", "red", "blue", "blue", "green", "green", "yellow", "yellow", "purple", "purple", "pink", "pink"];
 let tileObjects = []; //an array that stores all the tile data, element, html etc
 let clickedTiles = []; //stores the selected tiles, this array will hold max of 2 tiles
 let openTiles = 0; // keeps track of the correctly guessed tiles
@@ -47,9 +34,7 @@ for (const e of tileObjects) {
     if (clickedTiles.length === 2) {
       // compares the colour of opened tiles
       if (clickedTiles[0].colour === clickedTiles[1].colour) {
-        // clickedTiles.forEach(
-        //   (x) => (x.htmlElement.style.border = "#7FFF00 2px solid")
-        // );
+        clickedTiles.forEach((x) => (x.htmlElement.style.border = "#7FFF00 2px solid"));
 
         // keeping track of correct tiles, see code 51
         openTiles += 2;
@@ -60,9 +45,7 @@ for (const e of tileObjects) {
         // reset tiles after 300ms
         setTimeout(() => {
           //read on setTimeout syntax
-          clickedTiles.forEach(
-            (element) => (element.htmlElement.style.backgroundColor = "grey")
-          );
+          clickedTiles.forEach((element) => (element.htmlElement.style.backgroundColor = "grey"));
 
           //reset
           clickedTiles = [];
@@ -72,9 +55,13 @@ for (const e of tileObjects) {
 
     // check if game is won
     if (openTiles === 12) {
-      const node = document.createElement("H1");
-      node.textContent = "You won!";
-      document.body.appendChild(node);
+      const won = document.createElement("H1");
+      won.textContent = "You won!";
+      document.body.appendChild(won);
+      let resetButton = document.querySelector("#reset");
+      resetButton.addEventListener("click", function () {
+        location.reload();
+      });
     }
   });
 }
