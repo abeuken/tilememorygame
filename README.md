@@ -1,9 +1,28 @@
-TILE MEMORY GAME
+# TILE MEMORY GAME
 
-Rules: Click on the tiles to reveal a color, click on another tile to find the color match. Tiles stays open once matched! Complete the game by matching all tiles! To play again, refresh page!
+Rules: Click on the tiles to reveal a color, click on another tile to find the matching color.
+Tiles stays open once matched. Complete the game by matching all tiles!
+Refresh page to play again!
 
-☐ Technologies Used: JavaScript, HTML, CSS
+# Screenshot
 
-☐ Game Enhancements for the future ..... Timed game, getting user input for Names, putting in a scoreboard
+<img src="screenshotgame.png">
 
-![screenshot](screenshotgame.png)
+# Technologies Used
+
+- JavaScript
+- HTML
+- CSS
+
+# Getting Started
+
+CLICK TO PLAY!
+http://127.0.0.1:5500/index.html
+
+# Future Enhancements
+
+- Timed game
+
+- User input for player Names
+
+- Scoreboard
